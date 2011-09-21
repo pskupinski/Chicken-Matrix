@@ -41,7 +41,7 @@
       (attron (COLOR_PAIR 1))
       (border 0 0 0 0 0 0 0 0)
       (mvaddstr 0 0 "Press 'Esc' to exit")
-      (mvaddstr 0 (- (/ cols 2) 3) "Matrix")
+      (mvaddstr 0 (- (fx/ cols 2) 3) "Matrix")
       (for-each render-strip strips)
       (thread-sleep! 0.08)
       (loop (getch) (rebuild-strip-list strips) s)))
